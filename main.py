@@ -9,9 +9,14 @@ with st.sidebar:
 
 word = st.text_input("请输入单词：")
 
-if word:
+submit = st.button("开始创作")
+
+if submit:
     if not api_key:
         st.info("请先在侧边栏输入DeepSeek API Key")
+        st.stop()
+    if not word:
+        st.info("请先输入单词")
         st.stop()
     else:
         with st.spinner("AI正在思考中，请稍等..."):
