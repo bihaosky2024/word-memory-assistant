@@ -2,6 +2,7 @@ import streamlit as st
 from utils import generate_word_context
 
 st.title("📒 单词记忆小助手")
+st.markdown("##### 基于DeepSeek的AI小助手：为陌生的英文单词创作一个有趣的小故事并造句，以帮助记忆英文单词。")
 
 with st.sidebar:
     api_key = st.text_input("请输入DeepSeek API Key：", type="password")
